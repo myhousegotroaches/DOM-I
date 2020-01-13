@@ -46,25 +46,37 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-const anchors = document.querySelectorAll("a");
+let nav = document.querySelectorAll("a");
+nav[0].textContent = siteContent.nav["nav-item-1"];
+nav[1].textContent = siteContent.nav["nav-item-2"];
+nav[2].textContent = siteContent.nav["nav-item-3"];
+nav[3].textContent = siteContent.nav["nav-item-4"];
+nav[4].textContent = siteContent.nav["nav-item-5"];
+nav[5].textContent = siteContent.nav["nav-item-6"];
 
-console.log(anchors);
+const bigLogoImg = document.querySelector(".cta img");
+bigLogoImg.src = siteContent.cta["img-src"];
 
-anchors[0].textContent = "Services";
-anchors[1].textContent = "Product";
-anchors[2].textContent = "Vision";
-anchors[3].textContent = "Features";
-anchors[4].textContent = "About";
-anchors[5].textContent = "Contact";
-
-const bigLogoImg = document.querySelector("#cta-img");
-bigLogoImg.src = "img/header-img.png";
-
-const mainTextHeader = document.querySelector(".cta-text h1");
-mainTextHeader.textContent = "DOM IS AWESOME";
-
+const mainTextCenter = document.querySelector(".cta-text h1");
+mainTextCenter.textContent = siteContent.cta.h1;
 const mainButton = document.querySelector(".cta-text button");
-mainButton.textContent = "Get Started";
+mainButton.textContent = siteContent.cta.button;
 
 const middleSlabPic = document.querySelector(".main-content img");
 middleSlabPic.src = "img/mid-page-accent.jpg";
+
+let middleTextH4 = document.querySelectorAll(".text-content h4");
+middleTextH4[0].textContent = siteContent["main-content"]["features-h4"];
+middleTextH4[1].textContent = siteContent["main-content"]["about-h4"];
+middleTextH4[2].textContent = siteContent["main-content"]["services-h4"];
+middleTextH4[3].textContent = siteContent["main-content"]["product-h4"];
+middleTextH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+let middleTextP = document.querySelectorAll(".text-content p");
+middleTextP[0].textContent = siteContent["main-content"]["features-content"];
+middleTextP[1].textContent = siteContent["main-content"]["about-content"];
+middleTextP[2].textContent = siteContent["main-content"]["services-content"];
+middleTextP[3].textContent = siteContent["main-content"]["product-content"];
+middleTextP[4].textContent = siteContent["main-content"]["vision-content"];
+
+const footerText = document.querySelector("footer");
