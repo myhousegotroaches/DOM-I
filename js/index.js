@@ -54,6 +54,23 @@ nav[3].textContent = siteContent.nav["nav-item-4"];
 nav[4].textContent = siteContent.nav["nav-item-5"];
 nav[5].textContent = siteContent.nav["nav-item-6"];
 
+const wholeNav = document.querySelector("nav");
+const addAppends = document.createElement("a");
+addAppends.href = "www.gooogle.com";
+addAppends.textContent = "test";
+addAppends.style.color = "green";
+wholeNav.append(addAppends);
+
+const addprepend = document.createElement("a");
+addprepend.href = "www.gooogle.com";
+addprepend.textContent = "test1";
+addprepend.style.color = "green";
+wholeNav.prepend(addprepend);
+
+for (let i = 0; i < nav.length; i++) {
+  nav[i].style.color = "green";
+}
+
 const bigLogoImg = document.querySelector(".cta img");
 bigLogoImg.src = siteContent.cta["img-src"];
 
@@ -79,4 +96,13 @@ middleTextP[2].textContent = siteContent["main-content"]["services-content"];
 middleTextP[3].textContent = siteContent["main-content"]["product-content"];
 middleTextP[4].textContent = siteContent["main-content"]["vision-content"];
 
+const contactH4 = document.querySelector(".contact h4");
+contactH4.textContent = siteContent.contact["contact-h4"];
+
+const contactP = document.querySelectorAll(".contact p");
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+
 const footerText = document.querySelector("footer");
+footerText.textContent = siteContent.footer.copyright;
